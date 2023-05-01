@@ -81,6 +81,16 @@ public class BenchmarkTest00001 extends HttpServlet {
                                             .ESAPI
                                             .encoder()
                                             .encodeForHTML(new String(b, 0, size)));
+                                                        response.getWriter()
+                    .println(
+                            "The beginning of file: '"
+                                    + org.owasp.esapi.ESAPI.encoder().encodeForHTML(fileName)
+                                    + "' is:\n\n"
+                                    + org.owasp
+                                            .esapi
+                                            .ESAPI
+                                            .encoder()
+                                            .encodeForHTML(new String(b, 0, size)));
         } catch (Exception e) {
             System.out.println("Couldn't open FileInputStream on file: '" + fileName + "'");
             response.getWriter()
